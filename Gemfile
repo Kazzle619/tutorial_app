@@ -33,6 +33,7 @@ gem 'jbuilder', '2.7.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+#gem 'libnotify'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
