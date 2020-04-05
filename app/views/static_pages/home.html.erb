@@ -3,11 +3,11 @@
   <aside class="col-md-4">
     <%= render 'shared/logged_in_home' %>
   </aside>
-</div>
   <div class="col-md-8">
     <h3>Micropost Feed</h3>
     <%= render 'shared/feed' %>
   </div>
+</div>
 <% else %>
   <%= render 'shared/not_logged_in_home' %>
 <% end %>

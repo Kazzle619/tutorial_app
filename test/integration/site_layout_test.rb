@@ -15,6 +15,8 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", help_path
     assert_select "a[href=?]", about_path
     assert_select "a[href=?]", contact_path
+    assert_match @user.followers.count.to_s, response.body
+    assert_match @user.following.count.to_s, response.body
     get contact_path
     assert_select "title", full_title("Contact")
     get signup_path
