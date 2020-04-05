@@ -9,12 +9,6 @@ class PictureUploader < CarrierWave::Uploader::Base
       config.enable_processing = false
     end
   end
-  
-  if Rails.env.production?
-    storage :fog
-  else
-    storage :file
-  end
 
   # Choose what kind of storage to use for this uploader:
   storage :file
